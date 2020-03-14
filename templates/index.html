@@ -1,0 +1,53 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Mar 14 20:01:38 2020
+
+@author: pRoJyot
+"""
+
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Predict housing prices</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	
+    	<input type="text" name="Per Capita Crime Rate" placeholder="Crim" required="required" />
+        <input type="text" name="Residential land" placeholder="Zn" required="required" />
+		<input type="text" name="non-retail business acres" placeholder="Indus" required="required" />
+		<input type="text" name="Charles River dummy variable" placeholder="Chas" required="required" />
+        <input type="text" name="nitric oxides concentration " placeholder="Nox" required="required" />
+		<input type="text" name="average number of rooms" placeholder="RM" required="required" />
+		<input type="text" name="proportion of owner-occupied" placeholder="AGE" required="required" />
+        <input type="text" name="weighted distances " placeholder="DIS" required="required" />
+		<input type="text" name=" index of accessibility" placeholder="RAD" required="required" />
+		<input type="text" name="full-value property-" placeholder="TAX" required="required" />
+        <input type="text" name="pupil-teacher ratio" placeholder="PTRatio" required="required" />
+		<input type="text" name="Bk is the proportion of blacks" placeholder="B" required="required" />
+		<input type="text" name="lowerstatus population" placeholder="LSTAT" required="required" />
+    	
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
