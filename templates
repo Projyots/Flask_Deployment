@@ -1,2 +1,0 @@
-git rm --cached ./templates
-  git add ./templates
